@@ -47,4 +47,4 @@ These are the Hermes skills used in the originating conversation:
 
 ## Notes
 
-This repository currently contains original custom skills authored for your workflow. The upstream skills listed above are referenced for provenance and workflow context, but are not copied into this repo.
+This repository currently contains original custom skills intended for general reuse. The upstream skills listed above are referenced for provenance and workflow context, but are not copied into this repo.

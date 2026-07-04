@@ -41,7 +41,7 @@ Do not use this skill when the task is mostly about implementing code or debuggi
 2. **Vendor support matters.** Official SDKs, docs, integrations, and first-party support are stronger signals than social-media hype.
 3. **Enterprise acceptance is not just language preference.** Integration, security, observability, deployment model, procurement comfort, and team familiarity often matter more than syntax.
 4. **Do not confuse usage with suitability.** A popular tool may still be wrong for the user's context.
-5. **Always analyze the downside of inaction.** The user explicitly values negative analysis: what happens if the proposed adoption does not occur?
+5. **Always analyze the downside of inaction.** Explain what happens if the proposed adoption does not occur or if the current approach is retained.
 
 ## Research Workflow
 

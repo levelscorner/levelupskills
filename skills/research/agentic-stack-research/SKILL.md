@@ -44,7 +44,7 @@ Do not use this skill for broad non-AI tech trend questions; use `technology-ado
 3. **Go, Java, and C# can be highly credible in agentic systems.** Their role depends on whether the problem is experimentation, orchestration, enterprise integration, or operational reliability.
 4. **Provider SDK support is necessary but not sufficient.** Official SDKs prove support, not framework leadership.
 5. **Buyer perception depends on enterprise readiness, not only language choice.** Security, observability, deployment, integration, and governance often dominate buyer judgment.
-6. **Always analyze what happens if the user keeps the current stack.** The user values decision pressure, not vague neutrality.
+6. **Always analyze what happens if the current stack is retained.** The skill should produce a decision-useful conclusion, not vague neutrality.
 
 ## Stack Decomposition
 
