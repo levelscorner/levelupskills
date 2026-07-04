@@ -33,6 +33,7 @@ They are **not** intended to be specific to one founder, company, or project. Pr
 
 ### Product
 - `product-discovery-and-prioritization`
+- `customer-research-and-user-interviews`
 
 ### Engineering
 - `technical-architecture-and-platform-decisions`
@@ -52,12 +53,19 @@ They are **not** intended to be specific to one founder, company, or project. Pr
 
 ### Growth / GTM
 - `gtm-and-growth-experiments`
+- `b2c-growth-and-content-loops`
 
 ### Sales
 - `b2b-sales-discovery-and-pipeline`
 
 ### Support
 - `customer-support-and-feedback-ops`
+
+### Analytics
+- `analytics-and-metrics-system`
+
+### People
+- `hiring-and-people-ops-for-startups`
 
 ## Recommended way to use this repo
 
@@ -83,6 +91,8 @@ skills/
   product/
     product-discovery-and-prioritization/
       SKILL.md
+    customer-research-and-user-interviews/
+      SKILL.md
   engineering/
     technical-architecture-and-platform-decisions/
       SKILL.md
@@ -103,11 +113,19 @@ skills/
   growth/
     gtm-and-growth-experiments/
       SKILL.md
+    b2c-growth-and-content-loops/
+      SKILL.md
   sales/
     b2b-sales-discovery-and-pipeline/
       SKILL.md
   support/
     customer-support-and-feedback-ops/
+      SKILL.md
+  analytics/
+    analytics-and-metrics-system/
+      SKILL.md
+  people/
+    hiring-and-people-ops-for-startups/
       SKILL.md
 references/
   research-taxonomy.md

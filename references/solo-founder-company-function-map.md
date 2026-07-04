@@ -22,6 +22,8 @@ At solo-founder stage, these are usually **functions**, not full departments. Bu
 | Growth / GTM | positioning, channels, experiments, acquisition loops, messaging | growth lead / marketer |
 | Sales | qualification, demos, objections, pipeline, closing process | account executive / founder-led sales |
 | Support / success | support workflows, issue triage, feedback loops, retention hygiene | support lead / customer success lead |
+| Analytics / metrics | event design, KPI systems, dashboards, reporting cadence, instrumentation quality | analytics lead / growth analyst / product analyst |
+| Hiring / people ops | role design, hiring sequence, onboarding, accountability, people-risk hygiene | talent lead / people ops / startup operator |
 
 ## Deeper split: management
 
@@ -69,6 +71,8 @@ Do not try to master everything equally from day one. Build the function stack i
 - security / privacy maturity
 - analytics / forecasting depth
 - hiring / people systems
+- deeper customer research program
+- B2C growth loops if the product is audience-led
 
 ## Skill library recommendation
 
