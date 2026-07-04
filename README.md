@@ -1,22 +1,70 @@
 # levelupskills
 
-Custom Hermes skills for research-driven technology strategy and agentic stack analysis.
+Custom Hermes skills for **expert, profession-based, reusable thinking** across startup building, research, company design, product, engineering, finance, legal, payments, growth, sales, support, and operations.
 
-## Included skills
+## Philosophy
 
-### 1. `technology-adoption-research`
-Use when evaluating whether a language, framework, platform, database, protocol, or engineering tool is gaining or losing adoption, whether enterprises are likely to accept it, and what happens if a team does or does not adopt it.
+These skills are meant to feel like bringing in a strong professional from a real function:
 
-### 2. `agentic-stack-research`
-Use when evaluating languages, frameworks, SDKs, orchestration systems, memory/runtime choices, and platform trade-offs specifically for agentic AI products and systems.
+- strategy / founder advisor
+- product lead
+- architect / engineering lead
+- DevOps / reliability lead
+- security / privacy reviewer
+- startup finance operator
+- startup lawyer / CA / CS-informed operator
+- payments operator
+- growth lead
+- sales lead
+- customer success / support lead
+- operations lead
 
-## Why these exist
+They are **not** intended to be specific to one founder, company, or project. Project-specific application should live in repo docs, decision memos, or research notes.
 
-These skills are designed for questions like:
-- Are people moving from Python/Go to Java/C# for agentic development?
-- Will enterprise buyers reject a Python + Go stack?
-- How should we compare AI application stacks by adoption, enterprise fit, and ecosystem maturity?
-- What is the right language/runtime/framework choice for agentic systems?
+## Current skill library
+
+### Research
+- `technology-adoption-research`
+- `agentic-stack-research`
+
+### Management / company design
+- `startup-company-design`
+- `founder-operating-system`
+
+### Product
+- `product-discovery-and-prioritization`
+
+### Engineering
+- `technical-architecture-and-platform-decisions`
+- `devops-and-reliability-planning`
+
+### Security
+- `security-privacy-and-risk-review`
+
+### Finance
+- `startup-finance-and-unit-economics`
+
+### Legal / compliance
+- `india-tech-company-legal-compliance`
+
+### Payments
+- `payment-gateway-selection-for-software`
+
+### Growth / GTM
+- `gtm-and-growth-experiments`
+
+### Sales
+- `b2b-sales-discovery-and-pipeline`
+
+### Support
+- `customer-support-and-feedback-ops`
+
+## Recommended way to use this repo
+
+1. Use `references/solo-founder-company-function-map.md` to understand the full company function map.
+2. Use function skills for **general expert guidance**.
+3. Save project-specific decisions in your product/company repos, not inside these skills.
+4. Add new skills only when they are reusable across many startups or products.
 
 ## Repository structure
 
@@ -27,24 +75,46 @@ skills/
       SKILL.md
     agentic-stack-research/
       SKILL.md
+  management/
+    startup-company-design/
+      SKILL.md
+    founder-operating-system/
+      SKILL.md
+  product/
+    product-discovery-and-prioritization/
+      SKILL.md
+  engineering/
+    technical-architecture-and-platform-decisions/
+      SKILL.md
+    devops-and-reliability-planning/
+      SKILL.md
+  security/
+    security-privacy-and-risk-review/
+      SKILL.md
+  finance/
+    startup-finance-and-unit-economics/
+      SKILL.md
+  legal/
+    india-tech-company-legal-compliance/
+      SKILL.md
+  payments/
+    payment-gateway-selection-for-software/
+      SKILL.md
+  growth/
+    gtm-and-growth-experiments/
+      SKILL.md
+  sales/
+    b2b-sales-discovery-and-pipeline/
+      SKILL.md
+  support/
+    customer-support-and-feedback-ops/
+      SKILL.md
 references/
   research-taxonomy.md
+  solo-founder-company-function-map.md
 README.md
 ```
 
-## Skill inventory used while creating this repo
-
-These are the Hermes skills used in the originating conversation:
-- using-superpowers
-- strategic-research-briefs
-- deep-research
-- verification-before-completion
-- skill-creator
-- github-auth
-- github-repo-management
-- hermes-agent
-- hermes-agent-skill-authoring
-
 ## Notes
 
-This repository currently contains original custom skills intended for general reuse. The upstream skills listed above are referenced for provenance and workflow context, but are not copied into this repo.
+This repository is building toward a reusable startup-function skill library: skills that map to real professional roles, not one-off project notes.
