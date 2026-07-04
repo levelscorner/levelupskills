@@ -21,6 +21,105 @@ These skills are meant to feel like bringing in a strong professional from a rea
 
 They are **not** intended to be specific to one founder, company, or project. Project-specific application should live in repo docs, decision memos, or research notes.
 
+## How to use these skills in Hermes
+
+### Option 1: Add this repo as a skill tap
+
+This is the best way to make the repo available as a reusable skill source.
+
+```bash
+hermes skills tap add levelscorner/levelupskills
+```
+
+What this does:
+- registers `levelscorner/levelupskills` as a GitHub skill source
+- tells Hermes to look under the repo's `skills/` directory
+- lets you manage the repo as a reusable skill library across sessions and machines
+
+You can verify the tap exists with:
+
+```bash
+hermes skills tap list
+```
+
+### Option 2: Install a skill directly from a raw GitHub URL
+
+Use this when you only want one skill.
+
+Example:
+
+```bash
+hermes skills install https://raw.githubusercontent.com/levelscorner/levelupskills/main/skills/management/startup-company-design/SKILL.md --yes
+```
+
+Notes:
+- `--yes` skips the install confirmation prompt
+- use `--name <skill-name>` only if the remote `SKILL.md` has no `name:` frontmatter
+- raw GitHub URLs are useful for pin-point installs, but less convenient than tapping the repo if you want many skills
+
+### Option 3: Start Hermes with a skill preloaded
+
+Once a skill is installed locally, preload it into a new session:
+
+```bash
+hermes -s startup-company-design
+```
+
+You can preload multiple skills:
+
+```bash
+hermes -s startup-company-design,founder-operating-system,product-discovery-and-prioritization
+```
+
+### Option 4: Load a skill inside an existing session
+
+Inside Hermes, run:
+
+```text
+/skill startup-company-design
+```
+
+Use this when you already have a live conversation and want the skill added to that session.
+
+### Important behavior notes
+
+- Installing a skill and loading a skill are **different** steps.
+- `hermes skills install ...` puts the skill on disk.
+- `hermes -s ...` or `/skill ...` makes Hermes actively use it in a session.
+- Tool/skill changes may require a fresh session or `/reset` if the current session does not pick them up immediately.
+
+## Suggested starter bundles
+
+### Pre-idea / idea founder
+Start with:
+- `startup-company-design`
+- `product-discovery-and-prioritization`
+- `customer-research-and-user-interviews`
+- `startup-risk-register-and-decision-making`
+
+### Pre-beta founder
+Start with:
+- `founder-operating-system`
+- `technical-architecture-and-platform-decisions`
+- `india-tech-company-legal-compliance`
+- `startup-finance-and-unit-economics`
+- `pricing-and-packaging-strategy`
+
+### Beta / first users
+Start with:
+- `devops-and-reliability-planning`
+- `security-privacy-and-risk-review`
+- `payment-gateway-selection-for-software`
+- `customer-support-and-feedback-ops`
+- `analytics-and-metrics-system`
+
+### First revenue
+Start with:
+- `gtm-and-growth-experiments`
+- `founder-sales-for-b2b`
+- `customer-success-for-b2b`
+- `brand-positioning-and-messaging`
+
 ## Current skill library
 
 ### Research
@@ -135,6 +234,7 @@ They are **not** intended to be specific to one founder, company, or project. Pr
 2. Use function skills for **general expert guidance**.
 3. Save project-specific decisions in your product/company repos, not inside these skills.
 4. Add new skills only when they are reusable across many startups or products.
+5. Prefer loading a small set of relevant skills for the current startup stage instead of loading everything at once.
 
 ## Repository structure
 
@@ -224,6 +324,7 @@ skills/
 references/
   research-taxonomy.md
   solo-founder-company-function-map.md
+  using-levelupskills-with-hermes.md
 README.md
 ```
 
