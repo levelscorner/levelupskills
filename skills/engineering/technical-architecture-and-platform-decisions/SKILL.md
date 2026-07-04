@@ -28,9 +28,8 @@ Good architecture is not the most sophisticated design. It is the design that pr
 4. Recommend the narrowest architecture that fits likely reality.
 5. State explicit triggers for revisiting the decision later.
 
-## Decision dimensions
+## Always cover
 
-Always evaluate:
 - delivery speed
 - complexity cost
 - reliability implications

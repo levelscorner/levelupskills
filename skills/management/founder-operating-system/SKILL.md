@@ -20,9 +20,8 @@ Use this skill to design the founder's decision rhythm: what gets reviewed, how 
 
 A startup usually fails from **decision drift and attention fragmentation** before it fails from lack of ideas.
 
-## Operating system components
+## Always cover
 
-Always cover:
 - weekly priorities
 - decision log
 - risk register

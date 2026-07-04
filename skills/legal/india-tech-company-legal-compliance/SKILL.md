@@ -16,6 +16,10 @@ metadata:
 
 Use this skill to produce practical, founder-readable legal/compliance guidance for Indian tech companies.
 
+## Core Principle
+
+Legal/compliance guidance should help the founder build a durable document and process foundation while clearly separating hard obligations from items that require licensed professional confirmation.
+
 ## Important framing
 
 - Provide research and implementation guidance, not formal legal advice.
@@ -30,9 +34,8 @@ Unless told otherwise, assume:
 - software / SaaS / AI / app business
 - non-bank / non-regulated by default unless features trigger review
 
-## Minimum document packs
+## Always cover
 
-Always cover:
 - entity and governance documents
 - tax / filing support documents
 - employment / contractor / IP documents

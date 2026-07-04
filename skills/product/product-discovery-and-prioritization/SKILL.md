@@ -28,9 +28,8 @@ A feature is not valuable because it is interesting. It is valuable because it r
 4. Identify which features create learning versus just work.
 5. Recommend MVP, later, and not-now buckets.
 
-## Required lenses
+## Always cover
 
-Always consider:
 - user pain severity
 - business importance
 - technical complexity

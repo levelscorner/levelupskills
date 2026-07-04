@@ -36,7 +36,7 @@ Always separate:
 4. Flag legal/regulatory triggers.
 5. Recommend now, later, and avoid options.
 
-## Always evaluate
+## Always cover
 
 - subscriptions / recurring support
 - payout model and reserves

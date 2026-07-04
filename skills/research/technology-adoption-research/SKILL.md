@@ -43,7 +43,16 @@ Do not use this skill when the task is mostly about implementing code or debuggi
 4. **Do not confuse usage with suitability.** A popular tool may still be wrong for the user's context.
 5. **Always analyze the downside of inaction.** Explain what happens if the proposed adoption does not occur or if the current approach is retained.
 
-## Research Workflow
+
+## Always cover
+
+- adoption signals versus hype
+- enterprise fit and buyer interpretation
+- ecosystem and vendor support
+- migration cost and downside of inaction
+- what matters now versus later
+
+## Workflow
 
 ### 1. Frame the exact decision
 Identify what is actually being decided:
@@ -109,7 +118,7 @@ Always answer:
 - Is the current stack still defendable?
 - Under what conditions should the user revisit the decision?
 
-## Output Format
+## Output format
 
 Start with a short verdict section:
 - what is true now

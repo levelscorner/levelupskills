@@ -28,7 +28,7 @@ Early-stage security is about **risk concentration**: identify where a small mis
 4. Separate immediate controls from later maturity items.
 5. Recommend mitigations by severity and effort.
 
-## Always evaluate
+## Always cover
 
 - auth and access control
 - secrets and credentials

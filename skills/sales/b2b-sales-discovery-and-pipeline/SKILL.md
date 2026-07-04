@@ -28,6 +28,16 @@ Early sales is a diagnosis engine: it reveals urgency, buying friction, language
 4. Separate real deals from polite interest.
 5. Recommend pipeline actions and objection-handling posture.
 
+## Always cover
+
+- ideal customer profile
+- buyer roles and purchase trigger
+- discovery discipline
+- qualification logic
+- objection patterns
+- next-step clarity
+- pipeline learning loop
+
 ## Output format
 
 Return:

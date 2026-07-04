@@ -93,6 +93,42 @@ They are **not** intended to be specific to one founder, company, or project. Pr
 - `hiring-and-people-ops-for-startups`
 - `org-design-after-first-hires`
 
+## Founder stage navigation
+
+### Pre-idea / idea
+- `startup-company-design`
+- `product-discovery-and-prioritization`
+- `customer-research-and-user-interviews`
+- `startup-risk-register-and-decision-making`
+
+### Pre-beta
+- `founder-operating-system`
+- `technical-architecture-and-platform-decisions`
+- `india-tech-company-legal-compliance`
+- `startup-finance-and-unit-economics`
+- `pricing-and-packaging-strategy`
+
+### Beta / first users
+- `devops-and-reliability-planning`
+- `security-privacy-and-risk-review`
+- `payment-gateway-selection-for-software`
+- `customer-support-and-feedback-ops`
+- `analytics-and-metrics-system`
+
+### First revenue
+- `gtm-and-growth-experiments`
+- `founder-sales-for-b2b`
+- `customer-success-for-b2b`
+- `brand-positioning-and-messaging`
+
+### Repeatability / expansion
+- `hiring-and-people-ops-for-startups`
+- `org-design-after-first-hires`
+- `vendor-selection-and-procurement`
+- `partnerships-and-business-development`
+- `community-led-growth`
+- `marketplace-and-network-effects-strategy`
+
 ## Recommended way to use this repo
 
 1. Use `references/solo-founder-company-function-map.md` to understand the full company function map.

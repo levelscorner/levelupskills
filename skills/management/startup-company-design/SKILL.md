@@ -20,9 +20,8 @@ Use this skill to map a startup as a set of **functions** rather than vague depa
 
 A solo founder does not avoid departments. The founder temporarily **contains** them.
 
-## Function categories
+## Always cover
 
-Always think in terms of:
 - strategy / company design
 - founder operating system
 - product

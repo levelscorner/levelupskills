@@ -87,7 +87,16 @@ Always split the agentic stack into layers before judging it:
 
 Many false conclusions happen because people compare one language across all five layers as if the answer must be uniform.
 
-## Research Workflow
+
+## Always cover
+
+- adoption signals versus hype
+- enterprise fit and buyer interpretation
+- ecosystem and vendor support
+- migration cost and downside of inaction
+- what matters now versus later
+
+## Workflow
 
 ### 1. Frame the real user concern
 Usually the actual concern is one of these:
@@ -180,7 +189,7 @@ Use labels like:
 - **promising for performance-critical subsystems**
 - **not yet a default for agentic app development**
 
-## Output Format
+## Output format
 
 Start with:
 - **Verdict**

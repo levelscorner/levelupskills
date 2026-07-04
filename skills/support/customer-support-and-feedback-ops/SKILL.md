@@ -28,6 +28,15 @@ Support is one of the fastest ways to discover product truth because users compl
 4. Feed recurring themes back into product and operations.
 5. Recommend improvements that reduce both pain and support load.
 
+## Always cover
+
+- support channels and intake
+- triage categories
+- escalation rules
+- ownership clarity
+- product feedback loop
+- trust and retention implications
+
 ## Output format
 
 Return:
