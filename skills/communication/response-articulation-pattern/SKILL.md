@@ -1,7 +1,7 @@
 ---
 name: response-articulation-pattern
-description: Use when the user wants a response articulated clearly, structured well, easy to scan, and shaped to the task instead of dumped as loose prose. Also use when the answer needs the right response pattern for the situation: verdict, steps, comparison, summary, diagnosis, recommendation, or action plan. Helpful across Hermes, Claude, Cursor, Gemini, CLI agents, and chat apps.
-version: 1.0.0
+description: "Use when the user wants a response articulated clearly, structured well, easy to scan, and shaped to the task instead of dumped as loose prose. Also use when the answer needs the right response pattern for the situation: verdict, steps, comparison, summary, diagnosis, recommendation, or action plan. Helpful across Hermes, Claude, Cursor, Gemini, CLI agents, and chat apps. Do not use this as the main skill when the issue is primarily brevity or verdict ordering rather than structure selection."
+version: 1.1.0
 author: Hermes Agent
 license: MIT
 metadata:
@@ -13,14 +13,24 @@ metadata:
 # Response Articulation Pattern
 
 ## Overview
-Use this skill to shape the answer into the right structure for the actual task.
+Use this skill to choose the right response shape for the task. The goal is not just to be correct. The goal is to make the answer easy to read, easy to trust, and easy to act on.
 
-The goal is not just to be correct. The goal is to make the answer easy to read, easy to trust, and easy to act on.
+## When to Use
+Use this skill when the main problem is **shape mismatch**.
+
+Typical triggers:
+- the answer feels messy, blob-like, or hard to scan
+- the user wants something structured, articulated, or reformatted
+- the task could be answered as steps, comparison, diagnosis, summary, or plan
+- the agent is mixing several answer modes into one confusing block
+
+Do **not** use this as the main skill when:
+- the user mainly wants **fewer words** → use `concise-structured-communication`
+- the user mainly wants the **answer first** → use `verdict-first-writing`
+- a domain skill already defines a strict output format that should take priority
 
 ## Core Principle
-Different tasks need different response shapes.
-
-A good response is not one long generic paragraph. It is a structure that matches what the reader needs.
+Different tasks need different response shapes. A good response is not one long generic paragraph. It is a structure that matches what the reader needs.
 
 ## Workflow
 1. Identify the user's real need: answer, steps, comparison, summary, diagnosis, recommendation, or plan.
@@ -106,31 +116,18 @@ Expand when:
 - there are real tradeoffs
 - risk or ambiguity must be surfaced
 
-## Cross-platform usage note
-This skill is portable.
+## Common pitfalls
+1. **Choosing a fancy structure when a simple answer would do.** Structure should clarify, not decorate.
+2. **Mixing multiple response patterns at once.** This is how answers turn muddy.
+3. **Over-formatting trivial answers.** Not every reply needs sections and sub-sections.
+4. **Ignoring domain constraints.** If a technical or legal skill requires a specific output shape, follow that.
+5. **Solving shape but not substance.** Good articulation cannot rescue a weak answer.
 
-Use it the same way in:
-- Hermes
-- Claude
-- Cursor
-- Gemini
-- terminal or CLI agents
-- team chats, docs, notes, and decision messages
-
-It is a response design pattern, not a tool-specific feature.
-
-## Trigger phrases and situations
-Use this skill when the user says or implies things like:
-- structure this better
-- articulate this properly
-- make this clearer
-- make this easier to read
-- format this for a busy reader
-- turn this into a summary
-- compare these options
-- explain the problem and next step
-- give me a proper response pattern
-- this answer feels messy
+## Verification checklist
+- [ ] I identified the actual answer mode the task needed.
+- [ ] I chose the lightest useful structure.
+- [ ] I did not mix several incompatible response patterns into one blob.
+- [ ] I used structure because shape selection was the main need, not because another communication skill should have led.
 
 ## Examples
 ### Example: comparison

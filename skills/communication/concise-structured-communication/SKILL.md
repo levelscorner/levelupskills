@@ -1,43 +1,55 @@
 ---
 name: concise-structured-communication
-description: Use when the user wants a short, clear, low-wording response with simple English, few lines, direct conclusions, verdict-first communication, compact summaries, minimal explanation, concise comparisons, short decision notes, or stripped-down summaries. Also use when the user says be brief, concise, to the point, simple English, verdict first, topic-body-verdict, no long explanation, few lines, or answer like a busy human would want to read.
-version: 1.1.0
+description: Use when the user wants a short, clear, low-wording response with simple English, few lines, direct conclusions, compact summaries, concise comparisons, short decision notes, or minimal explanation. Also use when the user says be brief, concise, to the point, simple English, no fluff, few lines, or answer like a busy human would want to read. Do not use this as the main skill when the real need is verdict ordering or response-pattern selection; pair or defer to those adjacent skills when that distinction matters.
+version: 1.2.0
 author: Hermes Agent
 license: MIT
 metadata:
   hermes:
-    tags: [communication, concise, writing, summaries, verdict, brevity]
-    related_skills: [founder-communication-and-updates, brand-positioning-and-messaging]
+    tags: [communication, concise, writing, summaries, brevity, clarity]
+    related_skills: [verdict-first-writing, response-articulation-pattern, founder-communication-and-updates]
 ---
 
 # Concise Structured Communication
 
 ## Overview
-Use this skill to turn answers into short, readable communication with low word count, simple English, and a direct conclusion.
+Use this skill to compress an answer without making it useless. The job is not to sound clipped for style points. The job is to remove drag, keep the necessary facts, and leave the reader with a clean answer they can absorb fast.
 
-This skill is not tied to one agent platform. It should work well in chat apps, IDE assistants, terminal agents, and general-purpose LLM conversations.
+## When to Use
+Use this skill when the main problem is **too many words**.
+
+Typical triggers:
+- the user wants brevity, plain English, or low word count
+- a long answer needs to be compressed into a usable summary
+- a comparison, diagnosis, or recommendation should be shorter
+- the reader is busy and only needs essentials
+- the output is becoming bloated with warm-up, restatement, or filler
+
+Do **not** use this as the primary skill when:
+- the main issue is **answer ordering** rather than length → use `verdict-first-writing`
+- the main issue is **choosing the right structure** for a messy answer → use `response-articulation-pattern`
+- high-risk context requires detail that cannot safely be compressed
 
 ## Core Principle
-Most people do not want a wall of text. Good concise communication gives the answer fast, keeps only the useful facts, and ends with a clear verdict.
-
-## Workflow
-1. Identify the user's real question, decision, or requested output.
-2. Remove filler, repetition, hedging, long setup, and obvious restatements.
-3. Keep only the minimum facts needed to answer correctly.
-4. Prefer short sentences, plain words, and direct recommendations.
-5. Use the Topic / Body / Verdict structure unless the user requests a different format.
-6. Expand only when detail is needed for safety, correctness, or avoiding confusion.
+Concise writing is not small writing. It is writing with a high signal-to-noise ratio.
 
 ## Always cover
-- what this is about
-- essential facts only
-- direct answer or recommendation
-- simple English
-- no padding
-- no explanation unless needed for correctness or safety
+- what the question is really about
+- only the facts needed for a correct answer
+- the direct answer or recommendation
+- plain language where possible
+- any warning that materially changes the decision
+
+## Workflow
+1. Identify the user's actual question, decision, or requested output.
+2. Remove filler, repetition, hedging, throat-clearing, and obvious restatements.
+3. Keep only the minimum facts required for correctness.
+4. Prefer short sentences, plain words, and direct recommendations.
+5. Use a compact structure that still preserves clarity.
+6. Expand only when detail is needed for safety, correctness, or avoiding confusion.
 
 ## Output format
-Default to this exact structure when it fits:
+Default to this structure when it fits:
 
 Topic: one line saying what this is about.
 
@@ -49,68 +61,36 @@ Body:
 Verdict: one line with the answer, recommendation, or conclusion.
 
 ## Compression rules
-- Lead with the answer, not the warm-up.
-- Prefer one clear sentence over three soft sentences.
+- Lead with substance, not warm-up.
+- Prefer one clear sentence over three soft ones.
 - Replace complex words with simpler ones when meaning stays intact.
-- Cut throat-clearing like "here's the thing," "to clarify," or "it is important to note."
+- Cut phrases like "to clarify," "it is important to note," or "here's the thing" unless they add meaning.
 - Do not list every edge case unless the user asked for depth.
-- If risk is high, still be concise, but do not omit the warning.
-- If the user asks for a verdict, give the verdict plainly.
-- If the user asks for comparison, keep only the main differences.
+- If risk is high, stay concise but do not omit the warning.
+- If the user wants a verdict, give the verdict plainly.
 
 ## When to expand
 Expand beyond the default short format only when:
 - safety or irreversible action needs explanation
 - the user explicitly asks for detail
 - the task needs steps, evidence, or comparison to avoid confusion
-- the output would become misleading if over-compressed
+- over-compression would make the answer misleading
 
-## Cross-platform usage note
-Use the same communication pattern whether the answer is going into:
-- Hermes
-- Claude
-- Cursor
-- Gemini
-- Codex-style or terminal agents
-- chat apps like Telegram, Slack, Discord, WhatsApp, or similar
+## Common pitfalls
+1. **Compressing away the real answer.** Shorter is not better if the decision becomes unclear.
+2. **Cutting the warning but keeping the recommendation.** Dangerous in legal, security, or financial contexts.
+3. **Using telegraphic fragments that feel lazy.** The output should still read like intentional writing.
+4. **Confusing brevity with verdict-first.** Sometimes the answer should be short but not necessarily front-loaded the same way.
+5. **Flattening nuance that actually matters.** If one caveat changes the call, keep it.
 
-The point is not the tool. The point is readable human communication.
-
-## Trigger phrases and situations
-Apply this skill when the user says or clearly implies things like:
-- be brief
-- keep it short
-- concise answer
-- simple English
-- just tell me the answer
-- verdict first
-- no long explanation
-- few lines only
-- topic body verdict
-- summarize this quickly
-- compare in short
-- give me the conclusion
-- answer like a human with no fluff
-
-Also apply it when the context suggests the reader is busy and mainly needs:
-- a quick answer
-- a short summary
-- a short comparison
-- a direct recommendation
-- a decision-ready note
+## Verification checklist
+- [ ] I reduced words without removing the core answer.
+- [ ] I kept the language simple and direct.
+- [ ] I preserved any warning that changes the decision.
+- [ ] I chose brevity because the main need was compression, not because another communication skill should have handled it.
 
 ## Examples
-### Example: Q and A
-Topic: Best next step
-
-Body:
-- Traffic is low.
-- Product feedback is still weak.
-- Paid ads now will waste money.
-
-Verdict: Fix feedback and activation before spending on ads.
-
-### Example: Summary
+### Example: summary
 Topic: Meeting summary
 
 Body:
@@ -118,34 +98,24 @@ Body:
 - Login bug is still open.
 - Founder owns pricing page update.
 
-Verdict: Launch is on, but login bug must close first.
+Verdict: Launch is on, but the login bug must close first.
 
-### Example: Comparison
+### Example: comparison
 Topic: Stripe vs Paddle
 
 Body:
 - Stripe gives more control.
 - Paddle is easier for tax and merchant-of-record setup.
-- Paddle usually fits faster early-stage launch.
+- Paddle usually fits a faster early-stage launch.
 
 Verdict: Pick Paddle if speed and compliance matter more than control.
 
-### Example: Decision note
-Topic: Should we hire now
-
-Body:
-- Core product is still changing.
-- Process is not stable yet.
-- New hire may amplify chaos.
-
-Verdict: Do not hire yet. Stabilize first.
-
-### Example: Technical diagnosis
+### Example: technical diagnosis
 Topic: Why app is slow
 
 Body:
-- Database query takes too long.
-- No index on the filtered column.
-- CPU is fine. Bottleneck is database.
+- Database query is the bottleneck.
+- No index exists on the filtered column.
+- CPU is not the main issue.
 
 Verdict: Add the missing index first.
