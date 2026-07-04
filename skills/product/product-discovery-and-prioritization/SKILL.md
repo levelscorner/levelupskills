@@ -1,61 +1,88 @@
 ---
 name: product-discovery-and-prioritization
-description: Use when the user asks what to build first, how to prioritize features, how to validate user problems, how to sequence roadmap decisions, how to define MVP scope, or how to separate signal from wishlist noise. Also use for product discovery, founder-led product management, feature triage, pricing-hypothesis support, and roadmap decision frameworks.
-version: 1.0.0
+description: "Use when the user asks what to build first, how to prioritize features, how to validate user problems, how to sequence roadmap decisions, how to define MVP scope, or how to separate real product needs from noise. Also use when the user needs a disciplined discovery lens rather than random roadmap debate. Do not use this as the main skill for pure GTM experimentation or qualitative interview method when the core issue is product decision sequencing."
+version: 1.1.0
 author: Hermes Agent
 license: MIT
 metadata:
   hermes:
-    tags: [product, prioritization, discovery, roadmap, MVP, user-research]
-    related_skills: [startup-company-design, founder-operating-system, technical-architecture-and-platform-decisions]
+    tags: [product, discovery, prioritization, roadmap, MVP]
+    related_skills: [customer-research-and-user-interviews, analytics-and-metrics-system, gtm-and-growth-experiments]
 ---
 
 # Product Discovery and Prioritization
 
 ## Overview
+Use this skill to decide what deserves to be built, in what order, and with what level of confidence. The goal is not to make the roadmap feel organized. The goal is to direct scarce product effort toward the highest-value learning and delivery.
 
-Use this skill to decide what should be built, what should wait, and what evidence is needed before committing engineering effort.
+## When to Use
+Use this skill when the main problem is **product decision sequencing**.
+
+Typical triggers:
+- too many feature ideas
+- unclear MVP scope
+- roadmap debates without decision logic
+- user pain is being interpreted too loosely
+- the team cannot tell what matters now versus later
+- product effort is getting spread across noise
+
+Do **not** use this as the main skill when:
+- the issue is interview method → use `customer-research-and-user-interviews`
+- the issue is GTM channel/message learning → use `gtm-and-growth-experiments`
+- the task is raw analytics definition rather than product prioritization logic
 
 ## Core Principle
-
-A feature is not valuable because it is interesting. It is valuable because it reduces a critical uncertainty or improves a critical user outcome.
-
-## Workflow
-
-1. Define the user, job-to-be-done, and current pain.
-2. Separate user requests from user problems.
-3. Score ideas by impact, urgency, confidence, and cost.
-4. Identify which features create learning versus just work.
-5. Recommend MVP, later, and not-now buckets.
+Product prioritization is the discipline of putting limited build capacity behind the problems, bets, and learning loops that matter most right now.
 
 ## Always cover
+- current product bottleneck
+- user problem strength
+- learning value vs delivery value
+- scope discipline
+- sequencing logic
+- what to explicitly defer
 
-- user pain severity
-- business importance
-- technical complexity
-- feedback speed
-- monetization relevance
-- dependency burden
+## Workflow
+1. Identify the current stage, bottleneck, and user problem surface.
+2. Separate user pain, founder intuition, strategic bets, and noise.
+3. Evaluate options by value, urgency, confidence, and cost of delay.
+4. Recommend a sequence that preserves learning speed and delivery focus.
+5. State what should not be built yet and why.
 
 ## Output format
-
 Return:
-1. problem framing
-2. priority table
-3. MVP recommendation
-4. what not to build yet
-5. next validation steps
+1. prioritization diagnosis
+2. recommended scope / sequence
+3. rationale and trade-offs
+4. what to defer
+5. next validation or build steps
 
 ## Common pitfalls
-
-- roadmap by intuition only
-- shipping dependency-heavy features too early
-- building for imagined enterprise needs before real users appear
-- treating every request as equal
+1. **Treating every request as demand.** Requests are not automatically priorities.
+2. **Building broad scope to avoid hard choices.** That weakens learning.
+3. **Mixing strategic bets with tactical fixes without distinction.** Different bets need different logic.
+4. **Ignoring cost of delay or execution distraction.** Priority is about opportunity cost too.
+5. **Not naming what is explicitly deferred.** Hidden backlog sprawl still shapes attention.
 
 ## Verification checklist
+- [ ] I identified the current product bottleneck.
+- [ ] I separated signal from roadmap noise.
+- [ ] I recommended sequence, not just a ranked list.
+- [ ] I explicitly named what to defer and why.
 
-- [ ] I framed the actual user problem.
-- [ ] I prioritized by evidence and impact.
-- [ ] I gave a clear MVP recommendation.
-- [ ] I explicitly named what should wait.
+## Examples
+### Example: MVP confusion
+Return:
+1. The team is treating MVP like a feature grab-bag.
+2. Re-anchor on the core user problem and smallest proof of value.
+3. Cut supporting features that do not improve first-value learning.
+4. Sequence the roadmap around the strongest uncertainty.
+5. Review again after real usage evidence arrives.
+
+### Example: feature-request overload
+Return:
+1. Current issue is signal dilution, not lack of customer input.
+2. Group requests by underlying problem, not by loudest ask.
+3. Prioritize based on bottleneck and strategic fit.
+4. Reject or defer items that add cost without meaningful learning or value.
+5. Keep the roadmap small enough to finish things well.

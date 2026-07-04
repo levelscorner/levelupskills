@@ -6,10 +6,28 @@ This file explains how to install and use `levelupskills` across Hermes and othe
 
 `levelupskills` is a library of reusable `SKILL.md` files.
 
-Each skill is meant to be:
-- profession-based
+Each skill is intended to be:
+- profession-shaped
 - reusable across many founders, teams, and products
 - portable across agent systems
+- general-purpose rather than person-specific
+
+## Current repo standard
+
+The repo now expects skills to be stronger than lightweight notes.
+A mature skill in this library should usually contain:
+- trigger-rich frontmatter
+- `## Overview`
+- `## When to Use`
+- counter-triggers
+- category-specific workflow
+- `## Common Pitfalls`
+- `## Verification Checklist`
+- `## Examples`
+
+For the authoring standard, see:
+- [`references/2026-2027-skill-authoring-standards.md`](./references/2026-2027-skill-authoring-standards.md)
+- [`references/brutal-skill-audit.md`](./references/brutal-skill-audit.md)
 
 ## Quick setup by platform
 
@@ -22,8 +40,6 @@ Each skill is meant to be:
 | CLI / terminal agents | load `SKILL.md` into prompt file or instruction file | No | Manual setup; documented approach only |
 
 ## 1. Hermes setup
-
-These commands were already tested during repo setup work.
 
 ### Add the whole repo as a skill tap
 
@@ -43,10 +59,10 @@ hermes skills tap list
 hermes skills install https://raw.githubusercontent.com/levelscorner/levelupskills/main/skills/management/startup-company-design/SKILL.md --yes
 ```
 
-### Start Hermes with a skill preloaded
+### Start Hermes with skills preloaded
 
 ```bash
-hermes -s startup-company-design
+hermes -s startup-company-design,founder-operating-system
 ```
 
 ### Load a skill inside a live Hermes session
@@ -56,23 +72,21 @@ hermes -s startup-company-design
 ```
 
 ### Important Hermes note
-
 Installing and loading are different:
 - install puts the skill on disk
 - load makes Hermes use it in the session
 
 ## 2. Portable setup for Claude, Cursor, Gemini, and similar agents
 
-These systems usually do not have a shared native skill installer.
+These systems usually do not share Hermes-style install semantics.
 So the portable setup is instruction-based.
 
 ### General steps
-
 1. choose the skill you want from `skills/<category>/<skill-name>/SKILL.md`
 2. open the file
 3. copy the instruction body
-4. paste it into the target system's instruction slot
-5. reuse it whenever that kind of task appears
+4. paste it into the target system's instruction surface
+5. reuse it whenever that task class appears
 
 ### Where to paste it
 
@@ -81,7 +95,7 @@ So the portable setup is instruction-based.
 | Claude | project instructions, reusable prompt, or top of chat |
 | Cursor | project rules, workspace instructions, or reusable prompt snippet |
 | Gemini | saved instructions, project context, or top of chat |
-| Other CLI agents | prompt file, rules file, agent preset, or startup instruction block |
+| Other CLI agents | prompt file, rules file, preset, or startup instruction block |
 
 ## 3. Raw GitHub path pattern
 
@@ -97,10 +111,10 @@ Example:
 https://raw.githubusercontent.com/levelscorner/levelupskills/main/skills/communication/response-articulation-pattern/SKILL.md
 ```
 
-This is useful when you want to:
-- install directly in Hermes
-- open the raw file quickly
-- copy the skill into another agent system
+Useful for:
+- Hermes direct install
+- quick raw-file access
+- copying a skill into another system
 
 ## 4. Recommended starter setup
 
@@ -131,19 +145,21 @@ Start with a small pack.
 - `security-privacy-and-risk-review`
 - `payment-gateway-selection-for-software`
 
-## 5. Why there is no one universal install script
+## 5. How to keep the repo clean
 
-A universal script would only really help Hermes.
-Most other agent systems use different instruction surfaces instead of a common install command.
-
-So the right setup is:
-- **Hermes:** native install commands
-- **everything else:** portable `SKILL.md` copy/load workflow
-
-## 6. Best practice for repo growth
-
-When adding new skills:
+When adding or editing skills:
 - keep the skill body agent-agnostic
 - keep tool-specific setup notes in README, `SETUP.md`, or references
 - avoid project-specific instructions in the main skill body
-- prefer fewer strong skills over many narrow ones
+- prefer fewer strong skills over many thin ones
+- add counter-triggers where skill overlap is likely
+- include examples when a category is easy to misuse
+
+## 6. Why there is no one universal install script
+
+A universal script would mainly help Hermes.
+Most other agent systems use different instruction surfaces instead of a common install command.
+
+So the practical setup split is:
+- **Hermes:** native commands
+- **everything else:** portable `SKILL.md` copy/load workflow

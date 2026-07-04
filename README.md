@@ -1,124 +1,125 @@
 # levelupskills
 
-Custom Hermes skills for **expert, profession-based, reusable thinking** across startup building, research, company design, product, engineering, finance, legal, payments, growth, sales, support, communication, and operations.
+A public library of **general-purpose, profession-shaped startup and product skills** for Hermes and other agent systems.
 
-## Philosophy
+These skills are written to be:
+- reusable across companies, founders, and products
+- portable across agent environments
+- structured for real operational judgment, not one-off prompt tricks
+- strong on boundaries, pitfalls, examples, and verification
 
-These skills are meant to feel like bringing in a strong professional from a real function:
+This repo is **not** for company-specific or project-specific instructions.
+Project-specific context belongs in project docs, not in the skill bodies.
 
-- strategy / founder advisor
-- product lead
-- architect / engineering lead
-- DevOps / reliability lead
-- security / privacy reviewer
-- startup finance operator
-- startup lawyer / CA / CS-informed operator
-- payments operator
-- growth lead
-- sales lead
-- customer success / support lead
-- communication coach / editor
-- operations lead
+## What this repo is trying to be
 
-They are **not** intended to be specific to one founder, company, or project. Project-specific application should live in repo docs, decision memos, or research notes.
+`levelupskills` maps startup building into reusable expert functions:
+- research
+- company design
+- product
+- engineering
+- security
+- finance
+- pricing
+- legal / compliance
+- payments
+- growth
+- sales
+- support
+- customer success
+- analytics
+- AI product ops
+- brand
+- communication
+- operations
+- strategy
+- people
+
+Think of each skill as: **"load a sharp operator for this category."**
+
+## Library standard
+
+The repo now follows a stronger 2026-2027-style skill standard.
+
+A strong skill in this library should usually include:
+- trigger-rich description
+- `## Overview`
+- `## When to Use`
+- counter-triggers / adjacent-skill boundaries
+- domain-specific workflow and coverage
+- `## Common Pitfalls`
+- `## Verification Checklist`
+- `## Examples`
+
+See:
+- [`references/2026-2027-skill-authoring-standards.md`](./references/2026-2027-skill-authoring-standards.md)
+- [`references/brutal-skill-audit.md`](./references/brutal-skill-audit.md)
 
 ## Install and setup
 
 See [`SETUP.md`](./SETUP.md) for cross-agent installation and setup.
 
-See [`references/using-levelupskills-across-agents.md`](./references/using-levelupskills-across-agents.md) for cross-agent usage patterns.
+See [`references/using-levelupskills-across-agents.md`](./references/using-levelupskills-across-agents.md) for portable usage patterns.
 
 ## How to use these skills in Hermes
 
 ### Option 1: Add this repo as a skill tap
 
-This is the best way to make the repo available as a reusable skill source.
-
 ```bash
 hermes skills tap add levelscorner/levelupskills
 ```
 
-What this does:
-- registers `levelscorner/levelupskills` as a GitHub skill source
-- tells Hermes to look under the repo's `skills/` directory
-- lets you manage the repo as a reusable skill library across sessions and machines
-
-You can verify the tap exists with:
+Verify:
 
 ```bash
 hermes skills tap list
 ```
 
-### Option 2: Install a skill directly from a raw GitHub URL
-
-Use this when you only want one skill.
-
-Example:
+### Option 2: Install one skill directly from a raw GitHub URL
 
 ```bash
 hermes skills install https://raw.githubusercontent.com/levelscorner/levelupskills/main/skills/management/startup-company-design/SKILL.md --yes
 ```
 
-Notes:
-- `--yes` skips the install confirmation prompt
-- use `--name <skill-name>` only if the remote `SKILL.md` has no `name:` frontmatter
-- raw GitHub URLs are useful for pin-point installs, but less convenient than tapping the repo if you want many skills
-
-### Option 3: Start Hermes with a skill preloaded
-
-Once a skill is installed locally, preload it into a new session:
-
-```bash
-hermes -s startup-company-design
-```
-
-You can preload multiple skills:
+### Option 3: Start Hermes with skills preloaded
 
 ```bash
 hermes -s startup-company-design,founder-operating-system,product-discovery-and-prioritization
 ```
 
-### Option 4: Load a skill inside an existing Hermes session
-
-Inside Hermes, run:
+### Option 4: Load a skill inside a live Hermes session
 
 ```text
 /skill startup-company-design
 ```
 
-Use this when you already have a live conversation and want the skill added to that Hermes session.
+### Important Hermes behavior note
+- installing a skill and loading a skill are different steps
+- `hermes skills install ...` puts the skill on disk
+- `hermes -s ...` or `/skill ...` activates the skill in a session
+- if a session does not pick up a new skill immediately, start a fresh session or reset session context
 
-### Use the same skills outside Hermes too
+## Portable use outside Hermes
 
-These skills are written as portable instruction files, not Hermes-only logic.
-
-You can also paste or adapt them into:
+These skills are written as portable instruction files.
+You can also adapt them into:
 - Claude
 - Cursor
 - Gemini
-- Codex-style terminal agents
-- other chat or CLI agent systems
+- terminal/CLI agents
+- other chat-based or project-rule agent systems
 
-For non-Hermes systems, copy the relevant `SKILL.md` content into that system's prompt, instruction file, project rules, or reusable agent preset.
-
-### Important behavior notes
-
-- Installing a skill and loading a skill are **different** steps.
-- `hermes skills install ...` puts the skill on disk.
-- `hermes -s ...` or `/skill ...` makes Hermes actively use it in a session.
-- Tool/skill changes may require a fresh session or `/reset` if the current session does not pick them up immediately.
+For non-Hermes systems, copy the relevant `SKILL.md` body into that system's instruction surface.
 
 ## Suggested starter bundles
 
 ### Pre-idea / idea founder
-Start with:
 - `startup-company-design`
 - `product-discovery-and-prioritization`
 - `customer-research-and-user-interviews`
 - `startup-risk-register-and-decision-making`
 
 ### Pre-beta founder
-Start with:
 - `founder-operating-system`
 - `technical-architecture-and-platform-decisions`
 - `india-tech-company-legal-compliance`
@@ -126,7 +127,6 @@ Start with:
 - `pricing-and-packaging-strategy`
 
 ### Beta / first users
-Start with:
 - `devops-and-reliability-planning`
 - `security-privacy-and-risk-review`
 - `payment-gateway-selection-for-software`
@@ -134,11 +134,18 @@ Start with:
 - `analytics-and-metrics-system`
 
 ### First revenue
-Start with:
 - `gtm-and-growth-experiments`
 - `founder-sales-for-b2b`
 - `customer-success-for-b2b`
 - `brand-positioning-and-messaging`
+
+### Repeatability / expansion
+- `hiring-and-people-ops-for-startups`
+- `org-design-after-first-hires`
+- `vendor-selection-and-procurement`
+- `partnerships-and-business-development`
+- `community-led-growth`
+- `marketplace-and-network-effects-strategy`
 
 ## Current skill library
 
@@ -204,11 +211,8 @@ Start with:
 
 ### Communication
 - `concise-structured-communication`
-  - short answers, simple English, Topic / Body / Verdict, works across Hermes and other agent/chat systems
 - `verdict-first-writing`
-  - answer first, reasons after, strong for recommendations and decision notes
 - `response-articulation-pattern`
-  - pick the right structure for answers, steps, comparisons, diagnoses, and plans
 
 ### Operations
 - `vendor-selection-and-procurement`
@@ -260,110 +264,47 @@ Start with:
 
 ## Recommended way to use this repo
 
-1. Use `references/solo-founder-company-function-map.md` to understand the full company function map.
-2. Use function skills for **general expert guidance**.
-3. Use `references/using-levelupskills-across-agents.md` when you want portable usage patterns outside Hermes too.
-4. Save project-specific decisions in your product/company repos, not inside these skills.
-5. Add new skills only when they are reusable across many startups or products.
-6. Prefer loading a small set of relevant skills for the current startup stage instead of loading everything at once.
+1. Use `references/solo-founder-company-function-map.md` to understand the full function map.
+2. Load only the few skills relevant to the current problem or stage.
+3. Use function skills for **general expert guidance**.
+4. Save project-specific decisions in product/company repos, not inside these skills.
+5. Add new skills only when they are reusable across many products or teams.
+6. Prefer fewer strong skills over many thin ones.
 
 ## Repository structure
 
 ```text
 skills/
   research/
-    technology-adoption-research/
-      SKILL.md
-    agentic-stack-research/
-      SKILL.md
   management/
-    startup-company-design/
-      SKILL.md
-    founder-operating-system/
-      SKILL.md
-    startup-risk-register-and-decision-making/
-      SKILL.md
-    founder-communication-and-updates/
-      SKILL.md
   product/
-    product-discovery-and-prioritization/
-      SKILL.md
-    customer-research-and-user-interviews/
-      SKILL.md
   engineering/
-    technical-architecture-and-platform-decisions/
-      SKILL.md
-    devops-and-reliability-planning/
-      SKILL.md
   security/
-    security-privacy-and-risk-review/
-      SKILL.md
   finance/
-    startup-finance-and-unit-economics/
-      SKILL.md
   pricing/
-    pricing-and-packaging-strategy/
-      SKILL.md
   legal/
-    india-tech-company-legal-compliance/
-      SKILL.md
   payments/
-    payment-gateway-selection-for-software/
-      SKILL.md
   growth/
-    gtm-and-growth-experiments/
-      SKILL.md
-    b2c-growth-and-content-loops/
-      SKILL.md
   community/
-    community-led-growth/
-      SKILL.md
   sales/
-    b2b-sales-discovery-and-pipeline/
-      SKILL.md
-    founder-sales-for-b2b/
-      SKILL.md
   partnerships/
-    partnerships-and-business-development/
-      SKILL.md
   support/
-    customer-support-and-feedback-ops/
-      SKILL.md
   customer-success/
-    customer-success-for-b2b/
-      SKILL.md
   analytics/
-    analytics-and-metrics-system/
-      SKILL.md
   ai/
-    ai-product-evaluation-and-model-ops/
-      SKILL.md
   brand/
-    brand-positioning-and-messaging/
-      SKILL.md
   communication/
-    concise-structured-communication/
-      SKILL.md
-    verdict-first-writing/
-      SKILL.md
-    response-articulation-pattern/
-      SKILL.md
   operations/
-    vendor-selection-and-procurement/
-      SKILL.md
   strategy/
-    marketplace-and-network-effects-strategy/
-      SKILL.md
   people/
-    hiring-and-people-ops-for-startups/
-      SKILL.md
-    org-design-after-first-hires/
-      SKILL.md
 references/
+  2026-2027-skill-authoring-standards.md
+  brutal-skill-audit.md
   research-taxonomy.md
   solo-founder-company-function-map.md
   using-levelupskills-across-agents.md
 README.md
+SETUP.md
 ```
 
 ## Notes
