@@ -22,6 +22,10 @@ These skills are meant to feel like bringing in a strong professional from a rea
 
 They are **not** intended to be specific to one founder, company, or project. Project-specific application should live in repo docs, decision memos, or research notes.
 
+## Install and setup
+
+See [`SETUP.md`](./SETUP.md) for cross-agent installation and setup.
+
 ## How to use these skills in Hermes
 
 ### Option 1: Add this repo as a skill tap

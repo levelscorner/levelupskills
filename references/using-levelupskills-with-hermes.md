@@ -2,6 +2,8 @@
 
 This guide explains how to use the `levelscorner/levelupskills` repository both inside Hermes and outside Hermes.
 
+For installation and setup, start with [`SETUP.md`](../SETUP.md).
+
 ## Core idea
 
 `levelupskills` is a library of **profession-based reusable skill files**.
