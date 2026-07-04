@@ -1,6 +1,6 @@
 # levelupskills
 
-Custom Hermes skills for **expert, profession-based, reusable thinking** across startup building, research, company design, product, engineering, finance, legal, payments, growth, sales, support, and operations.
+Custom Hermes skills for **expert, profession-based, reusable thinking** across startup building, research, company design, product, engineering, finance, legal, payments, growth, sales, support, communication, and operations.
 
 ## Philosophy
 
@@ -17,6 +17,7 @@ These skills are meant to feel like bringing in a strong professional from a rea
 - growth lead
 - sales lead
 - customer success / support lead
+- communication coach / editor
 - operations lead
 
 They are **not** intended to be specific to one founder, company, or project. Project-specific application should live in repo docs, decision memos, or research notes.
@@ -182,6 +183,9 @@ Start with:
 ### Brand
 - `brand-positioning-and-messaging`
 
+### Communication
+- `concise-structured-communication`
+
 ### Operations
 - `vendor-selection-and-procurement`
 
@@ -309,6 +313,9 @@ skills/
       SKILL.md
   brand/
     brand-positioning-and-messaging/
+      SKILL.md
+  communication/
+    concise-structured-communication/
       SKILL.md
   operations/
     vendor-selection-and-procurement/

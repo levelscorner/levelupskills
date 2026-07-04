@@ -26,6 +26,7 @@ At solo-founder stage, these are usually **functions**, not full departments. Bu
 | Pricing / monetization | pricing logic, packaging, plan design, usage limits, monetization experiments | pricing strategist / growth-finance operator |
 | AI product ops | model quality, evals, routing, guardrails, cost/latency trade-offs, failure review | AI product operator / applied AI lead |
 | Brand / messaging | positioning, narrative, category framing, trust cues, communication coherence | brand strategist / positioning lead |
+| Communication / articulation | concise writing, decision-ready updates, summaries, verdict-first responses, low-noise communication | editor / communication coach / chief of staff |
 | Partnerships / business development | channels, alliances, integrations, referral and co-sell strategy | business development lead / partnerships lead |
 | Customer success | onboarding, adoption, stakeholder alignment, renewal and expansion readiness | customer success lead |
 | Operations / procurement | vendor selection, tooling economics, outsourcing and buy-vs-build decisions | operations lead / procurement operator |
