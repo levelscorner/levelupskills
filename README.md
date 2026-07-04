@@ -72,7 +72,7 @@ You can preload multiple skills:
 hermes -s startup-company-design,founder-operating-system,product-discovery-and-prioritization
 ```
 
-### Option 4: Load a skill inside an existing session
+### Option 4: Load a skill inside an existing Hermes session
 
 Inside Hermes, run:
 
@@ -80,7 +80,20 @@ Inside Hermes, run:
 /skill startup-company-design
 ```
 
-Use this when you already have a live conversation and want the skill added to that session.
+Use this when you already have a live conversation and want the skill added to that Hermes session.
+
+### Use the same skills outside Hermes too
+
+These skills are written as portable instruction files, not Hermes-only logic.
+
+You can also paste or adapt them into:
+- Claude
+- Cursor
+- Gemini
+- Codex-style terminal agents
+- other chat or CLI agent systems
+
+For non-Hermes systems, copy the relevant `SKILL.md` content into that system's prompt, instruction file, project rules, or reusable agent preset.
 
 ### Important behavior notes
 
@@ -185,6 +198,7 @@ Start with:
 
 ### Communication
 - `concise-structured-communication`
+  - short answers, simple English, Topic / Body / Verdict, works across Hermes and other agent/chat systems
 
 ### Operations
 - `vendor-selection-and-procurement`

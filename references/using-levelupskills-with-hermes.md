@@ -1,33 +1,30 @@
-# Using levelupskills with Hermes
+# Using levelupskills across Hermes and other agent systems
 
-This guide explains how to consume the `levelscorner/levelupskills` repository as a reusable Hermes skill library.
+This guide explains how to use the `levelscorner/levelupskills` repository both inside Hermes and outside Hermes.
 
-## What this repo is for
+## Core idea
 
-`levelupskills` is a library of **profession-based startup skills**.
+`levelupskills` is a library of **profession-based reusable skill files**.
 
-Use it when you want Hermes to reason more like:
-- a founder operator
-- a product lead
-- a technical architect
-- a DevOps / reliability lead
-- a startup finance operator
-- a startup lawyer / CA / CS-informed operator
-- a growth, sales, support, or customer success lead
+Each `SKILL.md` is meant to improve how an agent thinks, structures work, or communicates.
 
-Do **not** use this repo as a place for project-specific decisions. Those belong in your product/company repo docs.
+That means the library should work in:
+- Hermes
+- Claude
+- Cursor
+- Gemini
+- Codex-style terminal agents
+- other chat or CLI agent systems
 
-## 1. Add the repo as a Hermes skill tap
+## 1. Best experience: Hermes
+
+Hermes supports native skill install and loading.
+
+### Add the repo as a Hermes skill tap
 
 ```bash
 hermes skills tap add levelscorner/levelupskills
 ```
-
-Verified behavior:
-- Hermes accepts the repo as a tap source.
-- `hermes skills tap list` shows it as:
-  - repo: `levelscorner/levelupskills`
-  - path: `skills/`
 
 Check it:
 
@@ -35,55 +32,89 @@ Check it:
 hermes skills tap list
 ```
 
-## 2. Install an individual skill directly from GitHub
-
-If you want only one skill, install from the raw `SKILL.md` URL.
-
-Example:
+### Install one skill directly
 
 ```bash
 hermes skills install https://raw.githubusercontent.com/levelscorner/levelupskills/main/skills/management/startup-company-design/SKILL.md --yes
 ```
 
-Verified behavior:
-- the raw `SKILL.md` URL resolves successfully from GitHub
-- `hermes skills install` accepts direct HTTP(S) identifiers
+### Load skills into a Hermes session
 
-## 3. Load installed skills into Hermes sessions
-
-Install only puts the skill on disk. To actively use it, load it into a session.
-
-### Start a new session with skills preloaded
+New session:
 
 ```bash
 hermes -s startup-company-design
 ```
 
-Multiple skills:
-
-```bash
-hermes -s startup-company-design,founder-operating-system,product-discovery-and-prioritization
-```
-
-### Load a skill inside a live session
+Live session:
 
 ```text
 /skill startup-company-design
 ```
 
-### If the skill does not appear immediately
-
-Start a fresh session or reset:
+If needed, start fresh with:
 
 ```text
 /reset
 ```
 
-## 4. Recommended usage pattern
+## 2. Use outside Hermes
+
+Other systems may not have native skill install.
+That is fine.
+The skills are still usable.
+
+### General rule
+
+For Claude, Cursor, Gemini, or similar systems:
+1. open the relevant `SKILL.md`
+2. copy the instructions
+3. paste them into the system prompt, project instructions, agent preset, memory/rules file, or reusable template the tool supports
+4. use that skill when working on the matching task
+
+## 3. Example ways to use the same skill outside Hermes
+
+### Claude
+- paste a skill into a project instruction or a reusable prompt
+- or paste the relevant sections at the start of the conversation
+
+### Cursor
+- place the skill logic in project rules, workspace instructions, or a reusable prompt snippet
+- especially useful for writing, product, architecture, and founder-workflow skills
+
+### Gemini
+- paste the skill into the chat context or saved instruction set
+- use it as a reusable response pattern or expert role file
+
+### Terminal / CLI agents
+- store the `SKILL.md` beside the repo
+- load it into the prompt or instruction file used by that agent
+- reuse it as a standard operating prompt
+
+## 4. Good portable usage rule
+
+Do not think of these as Hermes-only features.
+Think of them as **high-quality instruction files**.
+
+Hermes can load them natively.
+Other agents can still use them by copy/paste or by attaching them to their own instruction systems.
+
+## 5. Communication skill example
+
+The communication skill `concise-structured-communication` is a good example of portability.
+
+It works in any system because it only defines:
+- when to be concise
+- how to structure the answer
+- how to end with a verdict
+- when to expand for safety or clarity
+
+That pattern works almost everywhere.
+
+## 6. Recommended usage pattern
 
 Do not load everything.
-
-Instead, pick a small set of skills based on the current company stage.
+Pick a small set based on the current company stage or task.
 
 ### Pre-idea / idea
 - `startup-company-design`
@@ -110,57 +141,13 @@ Instead, pick a small set of skills based on the current company stage.
 - `founder-sales-for-b2b`
 - `customer-success-for-b2b`
 - `brand-positioning-and-messaging`
+- `concise-structured-communication`
 
-## 5. Good operating rule
+## 7. Repo maintenance rule
 
-Use `levelupskills` like a library of reusable expert brains:
-
-- skills = reusable professional thinking
-- repo docs = project-specific application
-- decision memos = company-specific calls
-- product repo docs = implementation details
-
-## 6. Example workflows
-
-### Example: founder planning session
-
-```bash
-hermes -s startup-company-design,founder-operating-system
-```
-
-Then ask:
-- "Map the missing functions in my startup."
-- "Design my weekly operating cadence."
-- "What should I build first versus later?"
-
-### Example: pre-beta stack and legal setup
-
-```bash
-hermes -s technical-architecture-and-platform-decisions,india-tech-company-legal-compliance,startup-finance-and-unit-economics
-```
-
-Then ask:
-- "What is the simplest architecture for this product?"
-- "What legal and document stack do I need as an India-based SaaS founder?"
-- "How should I think about runway and pricing at this stage?"
-
-### Example: first-revenue GTM work
-
-```bash
-hermes -s founder-sales-for-b2b,gtm-and-growth-experiments,brand-positioning-and-messaging
-```
-
-Then ask:
-- "Help me diagnose this sales pipeline."
-- "What GTM experiments should I run first?"
-- "Tighten this positioning for B2B buyers."
-
-## 7. Repo maintenance guidance
-
-When adding new skills to this repo:
-
+When adding new skills:
 - make them profession-based
 - keep them reusable across many startups
 - avoid founder-specific or repo-specific instructions in `SKILL.md`
-- put specifics into references or separate repo docs
-- prefer a small number of strong umbrella skills over many narrow one-offs
+- write them so they still make sense outside Hermes
+- put tool-specific usage notes in README or references, not in the core skill logic
