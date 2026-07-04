@@ -25,7 +25,14 @@ At solo-founder stage, these are usually **functions**, not full departments. Bu
 | Analytics / metrics | event design, KPI systems, dashboards, reporting cadence, instrumentation quality | analytics lead / growth analyst / product analyst |
 | Pricing / monetization | pricing logic, packaging, plan design, usage limits, monetization experiments | pricing strategist / growth-finance operator |
 | AI product ops | model quality, evals, routing, guardrails, cost/latency trade-offs, failure review | AI product operator / applied AI lead |
+| Brand / messaging | positioning, narrative, category framing, trust cues, communication coherence | brand strategist / positioning lead |
+| Partnerships / business development | channels, alliances, integrations, referral and co-sell strategy | business development lead / partnerships lead |
+| Customer success | onboarding, adoption, stakeholder alignment, renewal and expansion readiness | customer success lead |
+| Operations / procurement | vendor selection, tooling economics, outsourcing and buy-vs-build decisions | operations lead / procurement operator |
+| Marketplace / network strategy | two-sided market design, liquidity, incentives, trust, cold-start strategy | marketplace strategist / platform operator |
+| Community | participation loops, member value, advocacy, audience retention | community lead |
 | Hiring / people ops | role design, hiring sequence, onboarding, accountability, people-risk hygiene | talent lead / people ops / startup operator |
+| Org design | reporting lines, ownership boundaries, delegation structure, scaling coordination | startup operator / people leader |
 
 ## Deeper split: management
 
@@ -78,6 +85,16 @@ Do not try to master everything equally from day one. Build the function stack i
 - hiring / people systems
 - deeper customer research program
 - B2C growth loops if the product is audience-led
+- stronger founder communication to stakeholders
+- pricing / packaging discipline
+
+### Wave 4 — after initial repeatability appears
+- partnerships / business development
+- customer success systems
+- brand / positioning maturity
+- vendor and procurement rigor
+- org-design refinement after first hires
+- community-led growth or marketplace strategy when the business model actually needs it
 
 ## Skill library recommendation
 

@@ -31,6 +31,7 @@ They are **not** intended to be specific to one founder, company, or project. Pr
 - `startup-company-design`
 - `founder-operating-system`
 - `startup-risk-register-and-decision-making`
+- `founder-communication-and-updates`
 
 ### Product
 - `product-discovery-and-prioritization`
@@ -58,13 +59,20 @@ They are **not** intended to be specific to one founder, company, or project. Pr
 ### Growth / GTM
 - `gtm-and-growth-experiments`
 - `b2c-growth-and-content-loops`
+- `community-led-growth`
 
 ### Sales
 - `b2b-sales-discovery-and-pipeline`
 - `founder-sales-for-b2b`
 
+### Partnerships
+- `partnerships-and-business-development`
+
 ### Support
 - `customer-support-and-feedback-ops`
+
+### Customer Success
+- `customer-success-for-b2b`
 
 ### Analytics
 - `analytics-and-metrics-system`
@@ -72,8 +80,18 @@ They are **not** intended to be specific to one founder, company, or project. Pr
 ### AI product ops
 - `ai-product-evaluation-and-model-ops`
 
+### Brand
+- `brand-positioning-and-messaging`
+
+### Operations
+- `vendor-selection-and-procurement`
+
+### Strategy
+- `marketplace-and-network-effects-strategy`
+
 ### People
 - `hiring-and-people-ops-for-startups`
+- `org-design-after-first-hires`
 
 ## Recommended way to use this repo
 
@@ -97,6 +115,8 @@ skills/
     founder-operating-system/
       SKILL.md
     startup-risk-register-and-decision-making/
+      SKILL.md
+    founder-communication-and-updates/
       SKILL.md
   product/
     product-discovery-and-prioritization/
@@ -128,13 +148,22 @@ skills/
       SKILL.md
     b2c-growth-and-content-loops/
       SKILL.md
+  community/
+    community-led-growth/
+      SKILL.md
   sales/
     b2b-sales-discovery-and-pipeline/
       SKILL.md
     founder-sales-for-b2b/
       SKILL.md
+  partnerships/
+    partnerships-and-business-development/
+      SKILL.md
   support/
     customer-support-and-feedback-ops/
+      SKILL.md
+  customer-success/
+    customer-success-for-b2b/
       SKILL.md
   analytics/
     analytics-and-metrics-system/
@@ -142,8 +171,19 @@ skills/
   ai/
     ai-product-evaluation-and-model-ops/
       SKILL.md
+  brand/
+    brand-positioning-and-messaging/
+      SKILL.md
+  operations/
+    vendor-selection-and-procurement/
+      SKILL.md
+  strategy/
+    marketplace-and-network-effects-strategy/
+      SKILL.md
   people/
     hiring-and-people-ops-for-startups/
+      SKILL.md
+    org-design-after-first-hires/
       SKILL.md
 references/
   research-taxonomy.md
