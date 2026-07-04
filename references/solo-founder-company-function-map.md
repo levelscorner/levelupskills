@@ -23,6 +23,8 @@ At solo-founder stage, these are usually **functions**, not full departments. Bu
 | Sales | qualification, demos, objections, pipeline, closing process | account executive / founder-led sales |
 | Support / success | support workflows, issue triage, feedback loops, retention hygiene | support lead / customer success lead |
 | Analytics / metrics | event design, KPI systems, dashboards, reporting cadence, instrumentation quality | analytics lead / growth analyst / product analyst |
+| Pricing / monetization | pricing logic, packaging, plan design, usage limits, monetization experiments | pricing strategist / growth-finance operator |
+| AI product ops | model quality, evals, routing, guardrails, cost/latency trade-offs, failure review | AI product operator / applied AI lead |
 | Hiring / people ops | role design, hiring sequence, onboarding, accountability, people-risk hygiene | talent lead / people ops / startup operator |
 
 ## Deeper split: management
@@ -35,6 +37,8 @@ People often say "management" as one blob. For a startup, management usually bre
 4. **Legal / compliance** — are we exposing ourselves to avoidable risk?
 5. **Growth / GTM** — how do customers discover and understand us?
 6. **Sales / support** — how do deals and customer trust actually move?
+7. **Pricing / monetization** — how is value converted into revenue cleanly?
+8. **Decision/risk management** — how do we prevent avoidable mistakes and drift?
 
 ## Deeper split: tech
 
@@ -47,6 +51,7 @@ People often say "tech" as one blob too. For a tech company, it usually breaks i
 5. **Security / privacy** — how do we reduce technical and data risk?
 6. **Data / analytics** — how do we measure behavior and outcomes?
 7. **AI / model operations** — if relevant, how are models evaluated, routed, monitored, and cost-controlled?
+8. **Pricing instrumentation** — if usage/credits matter, how is monetization measured and controlled?
 
 ## Recommended solo-founder order
 

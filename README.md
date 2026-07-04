@@ -30,6 +30,7 @@ They are **not** intended to be specific to one founder, company, or project. Pr
 ### Management / company design
 - `startup-company-design`
 - `founder-operating-system`
+- `startup-risk-register-and-decision-making`
 
 ### Product
 - `product-discovery-and-prioritization`
@@ -45,6 +46,9 @@ They are **not** intended to be specific to one founder, company, or project. Pr
 ### Finance
 - `startup-finance-and-unit-economics`
 
+### Pricing
+- `pricing-and-packaging-strategy`
+
 ### Legal / compliance
 - `india-tech-company-legal-compliance`
 
@@ -57,12 +61,16 @@ They are **not** intended to be specific to one founder, company, or project. Pr
 
 ### Sales
 - `b2b-sales-discovery-and-pipeline`
+- `founder-sales-for-b2b`
 
 ### Support
 - `customer-support-and-feedback-ops`
 
 ### Analytics
 - `analytics-and-metrics-system`
+
+### AI product ops
+- `ai-product-evaluation-and-model-ops`
 
 ### People
 - `hiring-and-people-ops-for-startups`
@@ -88,6 +96,8 @@ skills/
       SKILL.md
     founder-operating-system/
       SKILL.md
+    startup-risk-register-and-decision-making/
+      SKILL.md
   product/
     product-discovery-and-prioritization/
       SKILL.md
@@ -104,6 +114,9 @@ skills/
   finance/
     startup-finance-and-unit-economics/
       SKILL.md
+  pricing/
+    pricing-and-packaging-strategy/
+      SKILL.md
   legal/
     india-tech-company-legal-compliance/
       SKILL.md
@@ -118,11 +131,16 @@ skills/
   sales/
     b2b-sales-discovery-and-pipeline/
       SKILL.md
+    founder-sales-for-b2b/
+      SKILL.md
   support/
     customer-support-and-feedback-ops/
       SKILL.md
   analytics/
     analytics-and-metrics-system/
+      SKILL.md
+  ai/
+    ai-product-evaluation-and-model-ops/
       SKILL.md
   people/
     hiring-and-people-ops-for-startups/
