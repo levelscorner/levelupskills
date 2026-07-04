@@ -26,6 +26,8 @@ They are **not** intended to be specific to one founder, company, or project. Pr
 
 See [`SETUP.md`](./SETUP.md) for cross-agent installation and setup.
 
+See [`references/using-levelupskills-across-agents.md`](./references/using-levelupskills-across-agents.md) for cross-agent usage patterns.
+
 ## How to use these skills in Hermes
 
 ### Option 1: Add this repo as a skill tap
@@ -203,6 +205,10 @@ Start with:
 ### Communication
 - `concise-structured-communication`
   - short answers, simple English, Topic / Body / Verdict, works across Hermes and other agent/chat systems
+- `verdict-first-writing`
+  - answer first, reasons after, strong for recommendations and decision notes
+- `response-articulation-pattern`
+  - pick the right structure for answers, steps, comparisons, diagnoses, and plans
 
 ### Operations
 - `vendor-selection-and-procurement`
@@ -241,6 +247,8 @@ Start with:
 - `founder-sales-for-b2b`
 - `customer-success-for-b2b`
 - `brand-positioning-and-messaging`
+- `verdict-first-writing`
+- `response-articulation-pattern`
 
 ### Repeatability / expansion
 - `hiring-and-people-ops-for-startups`
@@ -254,9 +262,10 @@ Start with:
 
 1. Use `references/solo-founder-company-function-map.md` to understand the full company function map.
 2. Use function skills for **general expert guidance**.
-3. Save project-specific decisions in your product/company repos, not inside these skills.
-4. Add new skills only when they are reusable across many startups or products.
-5. Prefer loading a small set of relevant skills for the current startup stage instead of loading everything at once.
+3. Use `references/using-levelupskills-across-agents.md` when you want portable usage patterns outside Hermes too.
+4. Save project-specific decisions in your product/company repos, not inside these skills.
+5. Add new skills only when they are reusable across many startups or products.
+6. Prefer loading a small set of relevant skills for the current startup stage instead of loading everything at once.
 
 ## Repository structure
 
@@ -335,6 +344,10 @@ skills/
   communication/
     concise-structured-communication/
       SKILL.md
+    verdict-first-writing/
+      SKILL.md
+    response-articulation-pattern/
+      SKILL.md
   operations/
     vendor-selection-and-procurement/
       SKILL.md
@@ -349,7 +362,7 @@ skills/
 references/
   research-taxonomy.md
   solo-founder-company-function-map.md
-  using-levelupskills-with-hermes.md
+  using-levelupskills-across-agents.md
 README.md
 ```
 

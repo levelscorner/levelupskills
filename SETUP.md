@@ -94,7 +94,7 @@ https://raw.githubusercontent.com/levelscorner/levelupskills/main/skills/<catego
 Example:
 
 ```text
-https://raw.githubusercontent.com/levelscorner/levelupskills/main/skills/communication/concise-structured-communication/SKILL.md
+https://raw.githubusercontent.com/levelscorner/levelupskills/main/skills/communication/response-articulation-pattern/SKILL.md
 ```
 
 This is useful when you want to:
@@ -122,6 +122,8 @@ Start with a small pack.
 - `founder-sales-for-b2b`
 - `customer-success-for-b2b`
 - `concise-structured-communication`
+- `verdict-first-writing`
+- `response-articulation-pattern`
 
 ### Engineering / platform starter pack
 - `technical-architecture-and-platform-decisions`

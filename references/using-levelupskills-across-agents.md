@@ -93,25 +93,26 @@ For Claude, Cursor, Gemini, or similar systems:
 - load it into the prompt or instruction file used by that agent
 - reuse it as a standard operating prompt
 
-## 4. Good portable usage rule
+## 4. Communication pack
+
+These three skills are designed to work together across agents:
+- `concise-structured-communication`
+- `verdict-first-writing`
+- `response-articulation-pattern`
+
+Use them when you want:
+- short answers
+- answer-first writing
+- clearer response structure
+- less filler and better scanning
+
+## 5. Good portable usage rule
 
 Do not think of these as Hermes-only features.
 Think of them as **high-quality instruction files**.
 
 Hermes can load them natively.
 Other agents can still use them by copy/paste or by attaching them to their own instruction systems.
-
-## 5. Communication skill example
-
-The communication skill `concise-structured-communication` is a good example of portability.
-
-It works in any system because it only defines:
-- when to be concise
-- how to structure the answer
-- how to end with a verdict
-- when to expand for safety or clarity
-
-That pattern works almost everywhere.
 
 ## 6. Recommended usage pattern
 
@@ -144,6 +145,8 @@ Pick a small set based on the current company stage or task.
 - `customer-success-for-b2b`
 - `brand-positioning-and-messaging`
 - `concise-structured-communication`
+- `verdict-first-writing`
+- `response-articulation-pattern`
 
 ## 7. Repo maintenance rule
 
